@@ -28,7 +28,6 @@
   // and have 4px margins without using font-size: 0
   font-size: 0;
   color: #77777a;
-  background-color: @table-body-bg;
   overflow: hidden;
   .box-sizing();
 
@@ -153,10 +152,12 @@
   // Important: We defined font-size: 0 in .tables-container due to the use of
   // display-inline: block. Font-size: 13px is used for the cell content
   font-size: 13px;
-  border-right: 1px solid @table-col-border-color;
+  // border-right: 1px solid @table-col-border-color;
+  margin-left: 10px;
   border-bottom: 1px dotted @table-row-border-color;
+  // border-bottom: 1px solid @table-row-border-color;
   // border-bottom: 1px dashed @table-row-border-color;
-  margin: 0 8px;
+  // margin: 0 8px;
   height: 100%;
 
   span {
@@ -324,7 +325,7 @@
   margin: 0;
   text-align: center;
   padding: 3px 2px 0 2px;
-  background-color: darken(@table-header-cell-control-group-color, 10%);
+  // background-color: darken(@table-header-cell-control-group-color, 10%);
   color: darken(@table-header-cell-control-group-color, 50%);
 }
 
@@ -395,7 +396,7 @@
   top: 0;
   left: -2px;
   height: 100%;
-  background-color: #333;
+  // background-color: #333;
   opacity: 0.4;
   width: 3px;
   z-index: 1000;
@@ -417,7 +418,7 @@
   // background-color: @table-header-cell-control-group-bg;
   // .gradient(@table-header-cell-gradient-start-color, @table-header-cell-gradient-end-color);
   // background-repeat: repeat-x;
-  background-color: #fff;
+  // background-color: #fff;
   // border-left: 1px solid @table-row-border-color;
   border-bottom: 1px solid @table-row-border-color;
   box-shadow: 0;
@@ -458,7 +459,7 @@
 /* Levels */
 
 .ember-table-table-row {
-  background-color: #fff;
+  // background-color: #fff;
   // .transition(0.1s background-color linear);
 
   &.ember-table-row-style-1 {
