@@ -22,8 +22,8 @@ body {
   margin: auto;
 }
 .scrollable::-webkit-scrollbar {
-  height: 16px;
-  width: 15px;
+  height: 7px;
+  width: 7px;
 }
 .scrollable::-webkit-scrollbar-button:start:decrement,
 .scrollable::-webkit-scrollbar-button:end:increment {

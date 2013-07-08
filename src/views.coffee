@@ -8,6 +8,7 @@ Ember.Table.TablesContainer = Ember.View.extend Ember.StyleBindingsMixin, Ember.
     @_super()
     @elementSizeDidChange()
     scrollBarWidth = $.getScrollbarWidth()
+    scrollBarWidth = 7
     @set 'controller._scrollbarSize', scrollBarWidth
     @set 'controller._tableScrollTop', 0
   onResize: ->
@@ -257,7 +258,7 @@ Ember.Table.BodyTableContainer =
 Ember.Table.TableContainer.extend Ember.MouseWheelHandlerMixin,
 Ember.ScrollHandlerMixin,
   templateName:   'body-container'
-  classNames:     ['ember-table-table-container', 'ember-table-body-container']
+  classNames:     ['ember-table-table-container', 'ember-table-body-container', 'scrollable']
   height:         Ember.computed.alias 'controller._bodyHeight'
   width:          Ember.computed.alias 'controller._width'
   scrollTop:      Ember.computed.alias 'controller._tableScrollTop'
@@ -299,7 +300,7 @@ Ember.Table.TableContainer.extend Ember.MouseWheelHandlerMixin,
 Ember.Table.ScrollContainer =
 Ember.View.extend Ember.StyleBindingsMixin, Ember.ScrollHandlerMixin,
   template: Ember.Handlebars.compile("{{view Ember.Table.ScrollPanel}}")
-  classNames:     ['ember-table-scroll-container']
+  classNames:     ['ember-table-scroll-container', 'scrollable']
   styleBindings:  ['top', 'left', 'width', 'height']
   width:          Ember.computed.alias 'controller._scrollContainerWidth'
   height:         Ember.computed.alias 'controller._scrollContainerHeight'
