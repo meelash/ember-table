@@ -129,9 +129,15 @@
   // Important: We defined font-size: 0 in .tables-container due to the use of
   // display-inline: block. Font-size: 13px is used for the cell content
   font-size: 13px;
-  margin-left: 16px;
+  // Use border left because of border-box
+  border-left: 16px solid transparent;
   border-bottom: 1px dotted #bbb;
   height: 100%;
+
+  // TODO(Louis): inefficient
+  &:first-child {
+    border-left: none;
+  }
 
   span {
     padding: 0;
@@ -151,6 +157,12 @@
   overflow: hidden;
   height: 100%;
   border-right: 0;
+}
+
+.ember-table-left-table-block .ember-table-table-cell {
+  margin-left: 0;
+  // margin-right: 16px;
+  border-right: 16px solid transparent;
 }
 
 /* Header Container */
@@ -299,7 +311,7 @@
   z-index: 1;
 
   .ember-table-table-cell {
-    border-top: 1px dotted #dcdcdc;
+    border-top: 1px dotted #bbb;
     border-bottom: none;
   }
 
@@ -443,7 +455,7 @@
 
   }
 
-  &.ember-table-last-row .ember-table-table-cell {
+  &.leftast-row .ember-table-table-cell {
     border-bottom: none !important;
   }
 }
