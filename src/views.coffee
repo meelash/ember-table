@@ -8,7 +8,7 @@ Ember.Table.TablesContainer = Ember.View.extend Ember.StyleBindingsMixin, Ember.
     @_super()
     @elementSizeDidChange()
     scrollBarWidth = $.getScrollbarWidth()
-    scrollBarWidth = 7
+    # scrollBarWidth = 7
     @set 'controller._scrollbarSize', scrollBarWidth
     @set 'controller._tableScrollTop', 0
   onResize: ->

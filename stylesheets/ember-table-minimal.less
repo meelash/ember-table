@@ -153,9 +153,10 @@
   // display-inline: block. Font-size: 13px is used for the cell content
   font-size: 13px;
   // border-right: 1px solid @table-col-border-color;
-  margin-left: 10px;
-  border-bottom: 1px dotted @table-row-border-color;
+  margin-left: 16px;
+  // border-bottom: 1px dotted @table-row-border-color;
   // border-bottom: 1px solid @table-row-border-color;
+  border-bottom: 1px dotted #bbb;
   // border-bottom: 1px dashed @table-row-border-color;
   // margin: 0 8px;
   height: 100%;
@@ -164,6 +165,10 @@
     padding: 0;
     // Note the -1 is because we use box sizing and the row has a bottom border
     line-height: @table-row-height - 1;
+
+    &:hover {
+      cursor: default;
+    }
   }
 
   .ember-table-content {
@@ -350,7 +355,7 @@
 
 /* Toggle Cell */
 
-.ember-table-toggle-span {
+.ember-table-toggle {
   position: absolute;
   top: 0;
   left: 0;
@@ -360,7 +365,7 @@
   margin: 0;
 
   &:hover {
-    cursor: pointer;
+    cursor: pointer !important;
   }
 }
 
@@ -374,7 +379,10 @@
   cursor: pointer;
   width: 14px;
   padding-left: 6px;
-  opacity: 0.3;
+}
+
+.ember-table-toggle.ember-table-collapse .ember-table-toggle-icon {
+  opacity: 0;
 
   &:hover{
     opacity: 0.5;
@@ -495,5 +503,10 @@
 
 .ember-table-body-container .ember-table-table-row.active {
   // background-color: rgba(0, 82, 196, 0.1);
-  background-color: #f6f6f6;
+  // background-color: #f6f6f6;
+  color: #111;
+
+  .ember-table-toggle.ember-table-collapse .ember-table-toggle-icon {
+    opacity: 0.3;
+  }
 }

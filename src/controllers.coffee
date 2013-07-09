@@ -16,7 +16,7 @@ Ember.Table.ColumnDefinition = Ember.Object.extend
   maxWidth: undefined
   # column width
   # TODO(Peter): Rename it to width
-  columnWidth:  150
+  columnWidth:  110
   # wether the colum is resizable
   isResizable:  yes
   # wether the column is sortable
