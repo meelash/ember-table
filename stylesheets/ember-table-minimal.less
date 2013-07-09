@@ -62,14 +62,6 @@
   height: 100%;
 }
 
-.ember-table-header-container {
-  // .box-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
-}
-
-.ember-table-footer-container {
-  // .box-shadow(0 -1px 2px rgba(0, 0, 0, 0.1));
-}
-
 .ember-table-table-block {
   display: inline-block;
   position: relative;
@@ -97,26 +89,11 @@
 
 .ember-table-fixed-table-container {
   z-index: 4;
-
-  &.ember-table-header-container {
-    // background-color: @table-header-bg;
-  }
-
-  &.ember-table-footer-container {
-    // background-color: @table-footer-bg;
-  }
 }
 
 // Important: Hides the horizontal scroll bar in the header
 .ember-table-header-row::-webkit-scrollbar {
   width: 0;
-}
-
-.ember-table-header-row,
-.ember-table-header-container .ember-table-table-fixed-wrapper {
-  // background-color: @table-header-cell-control-group-bg;
-  // .gradient(@table-header-cell-gradient-start-color, @table-header-cell-gradient-end-color);
-  background-repeat: repeat-x;
 }
 
 /* Table Rows */
@@ -152,13 +129,8 @@
   // Important: We defined font-size: 0 in .tables-container due to the use of
   // display-inline: block. Font-size: 13px is used for the cell content
   font-size: 13px;
-  // border-right: 1px solid @table-col-border-color;
   margin-left: 16px;
-  // border-bottom: 1px dotted @table-row-border-color;
-  // border-bottom: 1px solid @table-row-border-color;
   border-bottom: 1px dotted #bbb;
-  // border-bottom: 1px dashed @table-row-border-color;
-  // margin: 0 8px;
   height: 100%;
 
   span {
@@ -169,10 +141,6 @@
     &:hover {
       cursor: default;
     }
-  }
-
-  .ember-table-content {
-    // padding: 0 5px;
   }
 }
 
@@ -185,15 +153,9 @@
   border-right: 0;
 }
 
-.ember-table-left-table-block .ember-table-table-cell {
-  margin: 0;
-  // border-right: 1px solid @table-col-border-color !important;
-}
-
 /* Header Container */
 
 .ember-table-header-container {
-  // border-bottom: 1px solid @table-header-border-bottom;
   overflow: hidden;
 
   .ui-state-highlight {
@@ -266,11 +228,7 @@
   // Override the jQuery sortable
   display: block !important;
   font-size: 13px !important;
-  // text-transform: uppercase;
   border-right: none;
-  // background-color: @table-header-cell-control-group-bg;
-  // .gradient(@table-header-cell-gradient-start-color, @table-header-cell-gradient-end-color);
-  // background-repeat: repeat-x;
 
   span {
     line-height: 1;
@@ -292,7 +250,6 @@
       line-height: 1.4;
       position: absolute;
       bottom: 2px;
-      // font-weight: bold;
       color: #999;
     }
   }
@@ -330,7 +287,6 @@
   margin: 0;
   text-align: center;
   padding: 3px 2px 0 2px;
-  // background-color: darken(@table-header-cell-control-group-color, 10%);
   color: darken(@table-header-cell-control-group-color, 50%);
 }
 
@@ -338,7 +294,6 @@
 
 .ember-table-footer-container {
   position: absolute;
-  // border-top: 1px solid @table-footer-border-top;
   border-bottom: none;
   overflow: hidden;
   z-index: 1;
@@ -404,7 +359,6 @@
   top: 0;
   left: -2px;
   height: 100%;
-  // background-color: #333;
   opacity: 0.4;
   width: 3px;
   z-index: 1000;
@@ -423,11 +377,6 @@
   right: 0;
   z-index: 10;
   display: table;
-  // background-color: @table-header-cell-control-group-bg;
-  // .gradient(@table-header-cell-gradient-start-color, @table-header-cell-gradient-end-color);
-  // background-repeat: repeat-x;
-  // background-color: #fff;
-  // border-left: 1px solid @table-row-border-color;
   border-bottom: 1px solid @table-row-border-color;
   box-shadow: 0;
   vertical-align: middle;
@@ -471,29 +420,27 @@
   // .transition(0.1s background-color linear);
 
   &.ember-table-row-style-1 {
-    // border-bottom: 1px dotted @table-row-border-color;
-    // font-weight: bold;
-    // color: #3a3a39;
+
   }
 
   &.ember-table-row-style-2 {
-    // border-bottom: 1px dotted @table-row-border-color;
+
   }
 
   &.ember-table-row-style-3 {
-    // border-bottom: 1px dotted @table-row-border-color;
+
   }
 
   &.ember-table-row-style-4 {
-    // border-bottom: 1px dotted @table-row-border-color;
+
   }
 
   &.ember-table-row-style-5 {
-    // border-bottom: 1px dotted @table-row-border-color;
+
   }
 
   &.ember-table-row-style-6 {
-    // border-bottom: 1px dotted @table-row-border-color;
+
   }
 
   &.ember-table-last-row .ember-table-table-cell {
@@ -503,7 +450,6 @@
 
 .ember-table-body-container .ember-table-table-row.active {
   // background-color: rgba(0, 82, 196, 0.1);
-  // background-color: #f6f6f6;
   color: #111;
 
   .ember-table-toggle.ember-table-collapse .ember-table-toggle-icon {
