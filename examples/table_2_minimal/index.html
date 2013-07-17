@@ -27,7 +27,7 @@
     </script>
 
     <script type="text/x-handlebars" data-template-name="header-cell">
-      <div class="ember-table-content-container" {{action sortByColumn view.content}}>
+      <div class="ember-table-header-content-container" {{action sortByColumn view.content}}>
         <span class="ember-table-content">
           {{view.content.headerCellName}}
         </span>
@@ -51,7 +51,7 @@
           {{action toggleCollapse view.row}}>
         <i class="icon-caret-down ember-table-toggle-icon"></i>
       </span>
-      <div class="ember-table-content-container" {{action sortByColumn view.column}}>
+      <div class="ember-table-header-content-container" {{action sortByColumn view.column}}>
         <span class="ember-table-content">
           {{view.column.headerCellName}}
         </span>

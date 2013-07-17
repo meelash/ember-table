@@ -130,7 +130,8 @@
   // display-inline: block. Font-size: 13px is used for the cell content
   font-size: 13px;
   // Use border left because of border-box
-  border-left: 16px solid transparent;
+  // border-left: 16px solid transparent;
+  margin-left: 16px;
   border-bottom: 1px dotted #bbb;
   height: 100%;
 
@@ -160,9 +161,10 @@
 }
 
 .ember-table-left-table-block .ember-table-table-cell {
+  // This is not scalable for multiple frozen columns
   margin-left: 0;
-  // margin-right: 16px;
-  border-right: 16px solid transparent;
+  margin-right: 0;
+  border-right: 0;
 }
 
 /* Header Container */
@@ -213,7 +215,7 @@
   .ui-sortable-helper {
     background-color: #eaeaea;
 
-    .ember-table-content-container {
+    .ember-table-header-content-container {
       display: none;
     }
 
@@ -246,7 +248,7 @@
     line-height: 1;
   }
 
-  .ember-table-content-container {
+  .ember-table-header-content-container {
     position: absolute;
     top: 0;
     bottom: 0;
